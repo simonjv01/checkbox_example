@@ -12,7 +12,7 @@ class CheckboxModel {
     this.onToggle,
     this.shouldToggle = true,
   }) {
-    onToggle = this.toggle;
+    onToggle = toggle;
   }
 
   void toggle() {

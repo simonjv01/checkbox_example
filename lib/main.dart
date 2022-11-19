@@ -21,12 +21,20 @@ class _MyAppState extends State<MyApp> {
     CheckboxModel(title: 'Toggle Group', value: false),
     CheckboxModel(title: 'Test 3', value: false, shouldToggle: false),
     CheckboxModel(title: 'Test 4', value: false, shouldToggle: false),
+    CheckboxModel(title: 'Test 5', value: false, shouldToggle: false),
+    CheckboxModel(title: 'Test 6', value: false, shouldToggle: false),
+    CheckboxModel(title: 'Test 7', value: false, shouldToggle: false),
+    CheckboxModel(title: 'Test 8', value: false, shouldToggle: false),
+    CheckboxModel(title: 'Test 9', value: false, shouldToggle: false),
+    CheckboxModel(title: 'Test 10', value: false, shouldToggle: false),
   ];
 
   @override
   Widget build(BuildContext context) {
-    TextStyle style = const TextStyle(fontSize: 28, fontWeight: FontWeight.bold);
-    TextStyle style2 = const TextStyle(fontSize: 14, fontWeight: FontWeight.bold);
+    TextStyle style =
+        const TextStyle(fontSize: 28, fontWeight: FontWeight.bold);
+    TextStyle style2 =
+        const TextStyle(fontSize: 14, fontWeight: FontWeight.bold);
     List<Widget> checkboxModels = buildCheckboxes(checkboxes);
 
     return MaterialApp(
@@ -89,6 +97,25 @@ class _MyAppState extends State<MyApp> {
                         ],
                       ),
                     ),
+                    Container(
+                      margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                      decoration: BoxDecoration(
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Center(
+                              child: Text("Group 3", style: style2),
+                            ),
+                          ),
+                          checkboxModels[5],
+                          checkboxModels[6],
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -118,7 +145,7 @@ class _MyAppState extends State<MyApp> {
         value: model.value,
         onChanged: (_) {
           setState(
-                () {
+            () {
               model.toggle();
               swapEnabledGroup(checkboxes[2].value);
             },
@@ -127,7 +154,7 @@ class _MyAppState extends State<MyApp> {
       ),
       onTap: () {
         setState(
-              () {
+          () {
             swapEnabledGroup(checkboxes[2].value);
             model.toggle();
           },
@@ -142,11 +169,23 @@ class _MyAppState extends State<MyApp> {
       checkboxes[1].enable(false);
       checkboxes[3].enable(true);
       checkboxes[4].enable(true);
+      checkboxes[5].enable(true);
+      checkboxes[6].enable(true);
+      checkboxes[7].enable(true);
+      checkboxes[8].enable(true);
+      checkboxes[9].enable(true);
+      checkboxes[10].enable(true);
     } else {
       checkboxes[0].enable(true);
       checkboxes[1].enable(true);
       checkboxes[3].enable(false);
       checkboxes[4].enable(false);
+      checkboxes[5].enable(false);
+      checkboxes[6].enable(false);
+      checkboxes[7].enable(false);
+      checkboxes[8].enable(false);
+      checkboxes[9].enable(false);
+      checkboxes[10].enable(false);
     }
   }
 }
