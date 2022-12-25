@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Multi-Checkbox Demo'),
+          title: const Text('Multi Checkbox Demo'),
         ),
         body: Container(
           padding: const EdgeInsets.all(16),
