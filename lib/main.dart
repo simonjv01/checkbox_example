@@ -41,6 +41,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Multi Checkbox Demo'),
+          backgroundColor: Colors.yellow,
         ),
         body: Container(
           padding: const EdgeInsets.all(16),
